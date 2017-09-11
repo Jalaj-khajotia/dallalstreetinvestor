@@ -23,6 +23,10 @@ angular.module('myApp', ['ngRoute', 'jkAngularCarousel', 'ngMaterial', 'myApp.a'
 			.when('/using-moneycontrol-app', {
 				templateUrl: 'views/moneycontrol.html',
 				controller: 'pageController'
+			})
+			.when('/first-time-investors', {
+				templateUrl: 'views/first-time-investors.html',
+				controller: 'pageController'
 			});
 	}])
 
