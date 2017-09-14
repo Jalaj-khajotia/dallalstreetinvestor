@@ -34,3 +34,14 @@
 	.moneycontrol {
 		width: 65%;
 	}
+
+	.image{
+		max-height: 380px;
+	}
+
+	.bold-font{
+		font-weight: bold;
+	}
+	.no-bottom-margin{
+		margin-bottom: 0px;
+	}

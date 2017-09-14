@@ -5,9 +5,9 @@ angular.module('myApp', ['ngRoute', 'jkAngularCarousel', 'ngMaterial', 'myApp.a'
 
 	.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.when('/home', {
-				templateUrl: 'views/home.html',
-				controller: 'homeController'
-			})
+			templateUrl: 'views/home.html',
+			controller: 'homeController'
+		})
 			.when('/getting-started-with-IPO', {
 				templateUrl: 'views/ipo.html',
 				controller: 'pageController'
@@ -27,6 +27,14 @@ angular.module('myApp', ['ngRoute', 'jkAngularCarousel', 'ngMaterial', 'myApp.a'
 			.when('/first-time-investors', {
 				templateUrl: 'views/first-time-investors.html',
 				controller: 'pageController'
+			})
+			.when('/my-journey', {
+				templateUrl: 'views/my-journey.html',
+				controller: 'pageController'
+			})
+			.when('/how-to-make-money-work-for-you', {
+				templateUrl: 'views/rich-dad.html',
+				controller: 'pageController'
 			});
 	}])
 
@@ -37,25 +45,25 @@ angular.module('myApp', ['ngRoute', 'jkAngularCarousel', 'ngMaterial', 'myApp.a'
 			$scope.page = data;
 		}
 		$scope.dataArray = [{
-				src: 'images/thumbs/featured/featured-1.jpg'
-			},
-			{
-				src: 'images/thumbs/featured/featured-2.jpg'
-			},
-			{
-				src: 'images/thumbs/featured/featured-3.jpg'
-			}
+			src: 'images/thumbs/featured/featured-1.jpg'
+		},
+		{
+			src: 'images/thumbs/featured/featured-2.jpg'
+		},
+		{
+			src: 'images/thumbs/featured/featured-3.jpg'
+		}
 		];
 		(function ($) {
 
 			"use strict";
 
 			var cfg = {
-					defAnimation: "fadeInUp", // default css animation		
-					scrollDuration: 800, // smoothscroll duration
-					statsDuration: 4000, // stats animation duration
-					mailChimpURL: 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d'
-				},
+				defAnimation: "fadeInUp", // default css animation		
+				scrollDuration: 800, // smoothscroll duration
+				statsDuration: 4000, // stats animation duration
+				mailChimpURL: 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d'
+			},
 
 				$WIN = $(window);
 
@@ -423,256 +431,256 @@ angular.module('myApp', ['ngRoute', 'jkAngularCarousel', 'ngMaterial', 'myApp.a'
 
 					// map style
 					var style = [{
-							// set saturation for the labels on the map
-							elementType: "labels",
-							stylers: [{
-								saturation: saturation_value
-							}]
-						},
-						{ // poi stands for point of interest - don't show these lables on the map 
-							featureType: "poi",
-							elementType: "labels",
-							stylers: [{
-								visibility: "off"
-							}]
-						},
-						{
-							// don't show highways lables on the map
-							featureType: 'road.highway',
-							elementType: 'labels',
-							stylers: [{
-								visibility: "off"
-							}]
-						},
-						{
-							// don't show local road lables on the map
-							featureType: "road.local",
-							elementType: "labels.icon",
-							stylers: [{
-								visibility: "off"
-							}]
-						},
-						{
-							// don't show arterial road lables on the map
-							featureType: "road.arterial",
-							elementType: "labels.icon",
-							stylers: [{
-								visibility: "off"
-							}]
-						},
-						{
-							// don't show road lables on the map
-							featureType: "road",
-							elementType: "geometry.stroke",
-							stylers: [{
-								visibility: "off"
-							}]
-						},
-						// style different elements on the map
-						{
-							featureType: "transit",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
+						// set saturation for the labels on the map
+						elementType: "labels",
+						stylers: [{
+							saturation: saturation_value
+						}]
+					},
+					{ // poi stands for point of interest - don't show these lables on the map 
+						featureType: "poi",
+						elementType: "labels",
+						stylers: [{
+							visibility: "off"
+						}]
+					},
+					{
+						// don't show highways lables on the map
+						featureType: 'road.highway',
+						elementType: 'labels',
+						stylers: [{
+							visibility: "off"
+						}]
+					},
+					{
+						// don't show local road lables on the map
+						featureType: "road.local",
+						elementType: "labels.icon",
+						stylers: [{
+							visibility: "off"
+						}]
+					},
+					{
+						// don't show arterial road lables on the map
+						featureType: "road.arterial",
+						elementType: "labels.icon",
+						stylers: [{
+							visibility: "off"
+						}]
+					},
+					{
+						// don't show road lables on the map
+						featureType: "road",
+						elementType: "geometry.stroke",
+						stylers: [{
+							visibility: "off"
+						}]
+					},
+					// style different elements on the map
+					{
+						featureType: "transit",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
 						},
 						{
-							featureType: "poi",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
+							visibility: "on"
 						},
 						{
-							featureType: "poi.government",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
+							lightness: brightness_value
 						},
 						{
-							featureType: "poi.sport_complex",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "poi.attraction",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "poi.business",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "transit",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "transit.station",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "landscape",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-
-						},
-						{
-							featureType: "road",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "road.highway",
-							elementType: "geometry.fill",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
-						},
-						{
-							featureType: "water",
-							elementType: "geometry",
-							stylers: [{
-									hue: main_color
-								},
-								{
-									visibility: "on"
-								},
-								{
-									lightness: brightness_value
-								},
-								{
-									saturation: saturation_value
-								}
-							]
+							saturation: saturation_value
 						}
+						]
+					},
+					{
+						featureType: "poi",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "poi.government",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "poi.sport_complex",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "poi.attraction",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "poi.business",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "transit",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "transit.station",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "landscape",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+
+					},
+					{
+						featureType: "road",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "road.highway",
+						elementType: "geometry.fill",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					},
+					{
+						featureType: "water",
+						elementType: "geometry",
+						stylers: [{
+							hue: main_color
+						},
+						{
+							visibility: "on"
+						},
+						{
+							lightness: brightness_value
+						},
+						{
+							saturation: saturation_value
+						}
+						]
+					}
 					];
 
 					// map options
