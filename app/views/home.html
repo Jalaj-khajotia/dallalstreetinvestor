@@ -6,9 +6,14 @@
 				<div class="grid-sizer"></div>
 				<div class="brick entry featured-grid ">
 					<div class="entry-content">
-						<jk-carousel data="dataArray" item-template-url="'views/templates/carrousel.html'" max-width="800" max-height="800" auto-slide="false"
-						    auto-slide-time="2000">
-						</jk-carousel>
+						<slick class="slider" settings="slickConfig" ng-if="slickConfig1Loaded" dots="true">
+							<div ng-repeat="i in dataArray track by $index">
+								<a href="{{i.link}}" class="thumb-link">
+									<img src="{{i.src}}" style="height:450px;">
+									<h3 class="carasol-text">{{i.text}}</h3>									
+								</a>
+							</div>
+						</slick>
 						<!-- end featured-post-slider -->
 					</div>
 					<!-- end entry content -->
@@ -101,20 +106,6 @@
 							in anim.
 						</div>
 					</div>
-
-				</article>
-				<!-- /article -->
-
-				<article class="brick entry format-quote ">
-
-					<div class="entry-thumb">
-						<blockquote>
-							<p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
-
-							<cite>Dieter Rams</cite>
-						</blockquote>
-					</div>
-
 				</article>
 
 				<article class="brick entry format-standard ">
@@ -140,12 +131,36 @@
 							at a primary level of research for any company.
 						</div>
 					</div>
+				</article>
 
+				<article class="brick entry format-standard ">
+					<div class="entry-thumb">
+						<a href="#/how-to-make-money-work-for-you" class="thumb-link">
+																	  <img src="images/learn/richdad.jpg" alt="ferris wheel">                   
+																  </a>
+					</div>
+					<div class="entry-text">
+						<div class="entry-header">
+							<div class="entry-meta">
+								<span class="cat-links">
+															 <a href="">Beginner</a> 
+														</span>
+							</div>
+							<h1 class="entry-title">
+								<a href="#/how-to-make-money-work-for-you">How to make money work for you: Insights from Rich Dad Poor Dad?
+														</a>
+							</h1>
+						</div>
+						<div class="entry-excerpt">
+							We all want to be free from the headache of thinking constantly about money but only a few of us want to take the risk which
+							will make us free from it.
+						</div>
+					</div>
 				</article>
 				<article class="brick entry format-standard ">
 					<div class="entry-thumb">
-						<a href="#/first-time-investors" class="thumb-link">
-																		  <img src="images/learn/first-time.jpg" alt="ferris wheel">                   
+						<a href="#/first-time-investors" class="thumb-link">																		
+							<img src="images/learn/first-time.jpg" alt="ferris wheel">                   
 																	  </a>
 					</div>
 					<div class="entry-text">
@@ -156,12 +171,13 @@
 															</span>
 							</div>
 							<h1 class="entry-title">
-								<a href="#/first-time-investors">How to use MoneyControl mobile app for Investing?
+								<a href="#/first-time-investors">First time Investor: must read tips
 															</a>
 							</h1>
 						</div>
 						<div class="entry-excerpt">
-							Wonderful Insights from book: STOCK TO RICHES by Parag Parikh
+							As becoming a doctor, engineer or learning any other occupation takes time so is the investment. You cannot become a successful
+							investor overnight. Becoming an investor is your choice but being a successful investor thought an act of discipline.
 						</div>
 					</div>
 

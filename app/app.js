@@ -6,13 +6,17 @@ angular.module('myApp', [
 	'myApp.a',
 	'myApp.version',
 	'jkAngularCarousel',
-	'ngMaterial'
+	'ngMaterial',
+	'ng-animate',
+	'directive',
+	'slickCarousel'
 ]).
-config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-	$locationProvider.hashPrefix('!');
+	config(['$locationProvider', '$routeProvider', '$disqusProvider', '$scope', function ($locationProvider,
+		$routeProvider, $disqusProvider, $scope) {
+		$locationProvider.hashPrefix('!');
 
-	$routeProvider
-		.otherwise({
-			redirectTo: '/home'
-		});
-}]);
+		$routeProvider
+			.otherwise({
+				redirectTo: '/home'
+			});
+	}]);

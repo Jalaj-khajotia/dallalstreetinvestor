@@ -45,3 +45,15 @@
 	.no-bottom-margin{
 		margin-bottom: 0px;
 	}
+
+	.slick-prev {
+		left: 6px !important;
+		z-index: 10;
+	}
+	.slick-next {
+		right: 5px !important;
+	}	
+	.carasol-text{
+		margin-top:-50px; 
+		position:absolute;
+	}
