@@ -20,7 +20,7 @@
     "protractor": "^4.0.9"
   },
   "scripts": {
-    "postinstall": "npm install",
+    "postinstall": "bower install",
     "update-deps": "npm update",
     "postupdate-deps": "bower update",
     "prestart": "npm install",
